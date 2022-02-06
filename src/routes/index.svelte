@@ -10,10 +10,9 @@
       };
     }
 
-    console.log(data);
     return {
       props: {
-        images: data.Contents
+        images: data
       }
     };
   }

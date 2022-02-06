@@ -5,12 +5,13 @@ export async function get() {
   const bucketParams = { Bucket: 'mattthorningphotography.com' };
 
   try {
-    const data = await s3Client.send(new ListObjectsCommand(bucketParams));
+    // const data = await s3Client.send(new ListObjectsCommand(bucketParams));
+
     return {
       status: 200,
-      body: data
+      body: process.env
     };
- } catch (err) {
+  } catch (err) {
     console.log(err);
     return {
       status: 500,
